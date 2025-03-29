@@ -19,7 +19,7 @@
 ---
 include:
  - board: seeeduino_xiao_ble
-   shield: roBa_R nice_view_gem
+   shield: roBa_R
    snippet: studio-rpc-usb-uart
  - board: seeeduino_xiao_ble
    shield: roBa_L nice_view_gem
