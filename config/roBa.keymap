@@ -113,7 +113,7 @@
         };
 
         combo_sqt {
-            bindings = <&kp SQT>;
+            bindings = <&kp SEMI>;
             key-positions = <18 19>;
         };
 
