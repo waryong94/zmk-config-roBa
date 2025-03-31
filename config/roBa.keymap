@@ -7,16 +7,16 @@
 #define SCROLL 4
 
 / {
-	behaviors {
-        lt1: layer_taps 
-		{
-			compatible = "zmk,behavior-hold-tap";
-			label = "Layer-Tap";
-			#binding-cells = <2>;
-			tapping_term_ms = <215>;
+    behaviors {
+        lt1: layer_taps {
+            compatible = "zmk,behavior-hold-tap";
+            label = "Layer-Tap";
+            #binding-cells = <2>;
+            tapping_term_ms = <215>;
             flavor = "tap-preferred";
-			bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&kp>;
         };
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "HOMEROW_MODS";
@@ -26,7 +26,8 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-		sm: shift_mods {
+
+        sm: shift_mods {
             compatible = "zmk,behavior-hold-tap";
             label = "SHIFT_MODS";
             #binding-cells = <2>;
@@ -35,6 +36,7 @@
             flavor = "hold-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         ht: positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -42,26 +44,25 @@
             tapping-term-ms = <170>;
             quick-tap-ms = <0>;
             bindings = <&kp>, <&kp>;
+
             hold-trigger-key-positions = <0 1 2 3 4 5 6 7 8 9 14 15>;
-        };
-    };
-   };
-
-
-/ {
-    macros {
-	hello: hello {
-            label = "hello";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 10>
-		,<&macro_tap &kp H &kp E &kp L &kp L &kp O>
-                ;
         };
     };
 };
 
+/ {
+    macros {
+        hello: hello {
+            label = "hello";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap_time 10>,
+                <&macro_tap>,
+                <&kp H &kp E &kp L &kp L &kp O>;
+        };
+    };
+};
 
 / {
     combos {
@@ -138,47 +139,48 @@
 
         default_layer {
             bindings = <
-            &ht F1 Q &ht F2 W &ht F3 E &ht F4 R &ht F5 T                                                           &ht F6 Y &ht F7 U &ht F8 I &ht F9 O  &ht F10 P
-             &hm LGUI A &hm LALT S &hm LCTRL D &hm LSHFT F &ht F11 G       &ht F12 H &hm LSHFT J &hm LCTRL K &hm LALT L  &hm LGUI SQT
-            &kp Z &kp X         &kp C         &kp V                        &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH
-            &lt 2 ENTER   &lt 1 SPACE
+&ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
+&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
+&kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
+                                     &lt 2 ENTER  &lt 1 SPACE
             >;
+
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         NUM {
             bindings = <
-            &kp HOME &kp END &kp UP &kp BSPC &kp DEL   &kp PLUS &kp N7 &kp N8 &kp N9 &kp N0
-            &hm LGUI TAB &hm LALT LEFT &hm LCTRL DOWN &hm LSHFT RIGHT &kp PG_UP      &kp MINUS &kp N4 &kp N5 &kp N6 &kp EQUAL
-            &trans &trans &trans &trans &kp PG_DN          &kp N0 &kp N1  &kp N2 &kp N3 &kp DOT
-&trans                      &trans      
+&kp HOME      &kp END        &kp UP          &kp BSPC         &kp DEL            &kp PLUS   &kp N7  &kp N8  &kp N9  &kp N0
+&hm LGUI TAB  &hm LALT LEFT  &hm LCTRL DOWN  &hm LSHFT RIGHT  &kp PG_UP          &kp MINUS  &kp N4  &kp N5  &kp N6  &kp EQUAL
+&trans        &trans         &trans          &trans           &kp PG_DN          &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT
+                                             &trans           &trans
             >;
         };
 
         FUNCTION {
             bindings = <
-&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4                    &bt BT_CLR &bt BT_CLR_ALL &trans &trans &trans
-&bootloader  &trans  &trans  &trans  &trans        &bootloader  &trans &trans &trans &trans &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans 
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR   &bt BT_CLR_ALL  &trans  &trans  &trans
+&bootloader   &trans        &trans        &trans        &trans                &bootloader  &trans          &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans                &trans       &trans          &trans  &trans  &trans
+                                          &trans        &trans
             >;
         };
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans   &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &lt 4 DOT  &mkp MB2
+                        &trans  &trans
             >;
         };
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans
             >;
         };
     };
