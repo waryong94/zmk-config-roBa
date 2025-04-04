@@ -16,6 +16,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         ht: positional_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -24,6 +25,7 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
         scroll: layer_taps {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
@@ -116,6 +118,31 @@
             bindings = <&mkp MB5>;
             key-positions = <28 17>;
         };
+
+        SQ {
+            bindings = <&kp LS(Q)>;
+            key-positions = <0 31>;
+        };
+
+        SW {
+            bindings = <&kp LS(W)>;
+            key-positions = <31 1>;
+        };
+
+        SE {
+            bindings = <&kp LS(E)>;
+            key-positions = <2 31>;
+        };
+
+        SR {
+            bindings = <&kp LS(R)>;
+            key-positions = <3 31>;
+        };
+
+        ST {
+            bindings = <&kp LS(T)>;
+            key-positions = <4 31>;
+        };
     };
 
     keymap {
@@ -152,8 +179,8 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans     &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans     &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &scroll 4 DOT  &mkp MB2
                         &trans  &trans
             >;
