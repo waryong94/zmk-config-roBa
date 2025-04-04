@@ -37,8 +37,8 @@
         lt1_safely: lt1_safely {
             compatible = "zmk,behavior-to-layer";
             label = "LAYER1_WITH_MOUSE_OFF";
-            #binding-cells = <0>;
-            bindings = <&mo 1>;         // Layer 1 momentary (기존 lt 1과 동일)
+            #binding-cells = <1>;
+            bindings = <&mo 1>;
             on-activate {
                 layers = <3>;
             };
