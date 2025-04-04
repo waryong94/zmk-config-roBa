@@ -23,18 +23,21 @@
             bindings = <&kp>, <&kp>;
         };
 
-        mlt: mousekey_layer_tap {
+        scroll: scroll_mods {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             tapping-term-ms = <100>;
             flavor = "hold-preferred";
-            bindings = <&mo>, <&mkp>;
+            bindings = <&mo 4>, <&mkp>;
         };
 
-        mods: mods {
-      compatible = "zmk,behavior-momentary-layer";
-      #binding-cells = <1>;
-    };
+        sniping: spining_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <1>;
+            tapping-term-ms = <100>;
+            flavor = "hold-preferred";
+            bindings = <&mo 5>, <&mkp>;
+        };
     };
 };
 
@@ -157,15 +160,13 @@
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
                                      &lt 5 ENTER  &lt 2 SPACE
             >;
-
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
         };
 
         MOUSE {
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &mods 4 &mlt 5 RCLK
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &scroll DOT &sniping RCLK
                         &trans  &trans
             >;
         };
