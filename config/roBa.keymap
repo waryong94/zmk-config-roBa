@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#define MOUSE 3
+#define MOUSE 1
 #define SCROLL 4
 
 / {
@@ -33,22 +33,6 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
-
-lt1_safely: lt1_safely {
-    compatible = "zmk,behavior-hold-tap";
-    label = "LAYER1_WITH_MOUSE_OFF";
-    #binding-cells = <2>;
-    tapping-term-ms = <200>;
-    flavor = "hold-preferred";
-    bindings = <&mo>, <&kp>;
-
-    on-activate {
-        compatible = "zmk,behavior-custom";
-        exec {
-            zmk,deactivate-layer = <3>; // 마우스 레이어 끄기
-        };
-    };
-};
     };
 };
 
@@ -169,10 +153,19 @@ lt1_safely: lt1_safely {
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt1_safely 2 ENTER  &lt1_safely 1 SPACE
+                                     &lt 3 ENTER  &lt 2 SPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+        };
+
+        MOUSE {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &scroll 4 DOT  &mkp MB2
+                        &trans  &trans
+            >;
         };
 
         NUM {
@@ -190,15 +183,6 @@ lt1_safely: lt1_safely {
 &bootloader   &trans        &trans        &trans        &trans                &bootloader  &trans          &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans                &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT
                                           &trans        &trans
-            >;
-        };
-
-        MOUSE {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &scroll 4 DOT  &mkp MB2
-                        &trans  &trans
             >;
         };
 
