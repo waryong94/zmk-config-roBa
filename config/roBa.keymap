@@ -25,18 +25,18 @@
 
         scroll: scroll_mods {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             tapping_term_ms = <10>;
             flavor = "hold-preferred";
-            bindings = <&mo 4>, <&kp>;
+            bindings = <&mo 4 &kp>;
         };  
 
         sniping: sniping_mods {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
+            #binding-cells = <1>;
             tapping_term_ms = <100>;
             flavor = "hold-preferred";
-            bindings = <&mo 5>, <&mkp>;
+            bindings = <&mo 5 &mkp>;
         };  
     };
 };
