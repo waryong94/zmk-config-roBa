@@ -23,9 +23,16 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll_mods: scroll_mods {
+        mlt: mousekey_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <100>;
+            flavor = "hold-preferred";
+            bindings = <&mo>, <&mkp>;
+        };
+
+        mods: mods {
       compatible = "zmk,behavior-momentary-layer";
-      label = "SCROLL_MODS";
       #binding-cells = <1>;
     };
     };
@@ -158,7 +165,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &scroll_mods 4 &mkp RCLK
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &mods 4 &mlt 5 RCLK
                         &trans  &trans
             >;
         };
