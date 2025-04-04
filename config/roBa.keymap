@@ -3,6 +3,9 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
+#define SCROLL &scroll_mods 4 DOT
+#define SNIPING &sniping 5 RCLK
+
 / {
     behaviors {
         hm: homerow_mods {
@@ -23,20 +26,20 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll: scroll_mods {
+        scroll_mods : scroll_mods {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
-            tapping-term-ms = <100>;
+            #binding-cells = <2>;
+            tapping-term-ms = <10>;
             flavor = "hold-preferred";
-            bindings = <&mo 4>, <&mkp>;
+            bindings = <&mo>, <&kp>;
         };
 
-        sniping: spining_mods {
+        sniping_mods : sniping_mods {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <1>;
+            #binding-cells = <2>;
             tapping-term-ms = <100>;
             flavor = "hold-preferred";
-            bindings = <&mo 5>, <&mkp>;
+            bindings = <&mo>, <&mkp>;
         };
     };
 };
