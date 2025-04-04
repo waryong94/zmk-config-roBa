@@ -169,7 +169,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &SCROLL &SNIPING
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK SCROLL SNIPING
                         &trans  &trans
             >;
         };
