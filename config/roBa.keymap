@@ -94,7 +94,7 @@
 
         combo_capslock {
             bindings = <&kp CAPS>;
-            key-positions = <28 29>;
+            key-positions = <17 18>;
         };
 
         combo_lbkt {
