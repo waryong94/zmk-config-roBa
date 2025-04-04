@@ -30,6 +30,15 @@
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
+
+ sniping_or_rclick: behavior_custom_sniping_or_rclick {
+      compatible = "zmk,behavior-hold-tap";
+      #binding-cells = <0>;
+      tapping-term-ms = <200>;
+      flavor = "tap-preferred";
+      bindings = <&mkp MB2 &mo 5>;
+    };
+  
     };
 };
 
@@ -160,7 +169,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &scroll 4 DOT  &mkp MB2
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &scroll 4 DOT  &sniping_or_rclick
                         &trans  &trans
             >;
         };
