@@ -22,22 +22,6 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
-
-      scroll: scroll_mods {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <0>;
-    tapping-term-ms = <10>;
-    flavor = "hold-preferred";
-    bindings = <&mo 4>, <&kp DOT>;
-};
-
-sniping: sniping_mods {
-    compatible = "zmk,behavior-hold-tap";
-    #binding-cells = <0>;
-    tapping-term-ms = <100>;
-    flavor = "hold-preferred";
-    bindings = <&mo 5>, <&mkp MB2>;
-};
     };
 };
 
@@ -168,7 +152,7 @@ sniping: sniping_mods {
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &scroll  &sniping
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp MB1  &mkp MB3  &mkp MCLK &mkp MCLK
                         &trans  &trans
             >;
         };
