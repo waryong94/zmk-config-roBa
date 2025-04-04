@@ -34,15 +34,15 @@
             bindings = <&mo>, <&kp>;
         };
 
-        lt1_safely: lt1_safely {
-            compatible = "zmk,behavior-to-layer";
-            label = "LAYER1_WITH_MOUSE_OFF";
-            #binding-cells = <1>;
-            bindings = <&mo 1>;
-            on-activate {
-                layers = <3>;
-            };
-        };
+       lt1_safely: lt1_safely {
+    compatible = "zmk,behavior-to-layer";
+    label = "LAYER1_WITH_MOUSE_OFF";
+    #binding-cells = <1>;
+
+    on-activate {
+        layers = <3>; // 즉, mouse layer off!
+    };
+};
     };
 };
 
@@ -163,7 +163,7 @@
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt 2 ENTER  &lt1_safely SPACE
+                                     &lt 2 ENTER  &lt1_safely 1 SPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
