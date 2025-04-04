@@ -52,7 +52,7 @@
             label = "bat";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&output_text "Battery: %d%%\n">;
+bindings = <&bt_battery_report>;
         };
     };
 };
