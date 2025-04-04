@@ -48,6 +48,12 @@
                 <&macro_tap>,
                 <&kp H &kp E &kp L &kp L &kp O>;
         };
+        bat: bat {
+            label = "bat";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&output_text "Battery: %d%%\n">;
+        };
     };
 };
 
@@ -146,7 +152,7 @@
 
         FUNCTION {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR   &bt BT_CLR_ALL  &trans  &trans  &bt_battery_report
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR   &bt BT_CLR_ALL  &trans  &trans  &macro_bat
 &bootloader   &trans        &trans        &trans        &trans                &bootloader  &trans          &trans  &trans  &trans
 &trans        &trans        &trans        &trans        &trans                &trans       &trans          &trans  &trans  &trans
                                           &trans        &trans
