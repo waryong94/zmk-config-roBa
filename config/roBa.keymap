@@ -48,13 +48,6 @@
                 <&macro_tap>,
                 <&kp H &kp E &kp L &kp L &kp O>;
         };
-
-        bat: bat {
-            label = "bat";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&output_text "Battery: %d%%\n">;
-        };
     };
 };
 
