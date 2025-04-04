@@ -34,13 +34,19 @@
             bindings = <&mo>, <&kp>;
         };
 
-       lt1_safely: lt1_safely {
-    compatible = "zmk,behavior-to-layer";
+lt1_safely: lt1_safely {
+    compatible = "zmk,behavior-hold-tap";
     label = "LAYER1_WITH_MOUSE_OFF";
-    #binding-cells = <1>;
+    #binding-cells = <2>;
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+    bindings = <&mo>, <&kp>;
 
     on-activate {
-        layers = <3>; // 즉, mouse layer off!
+        compatible = "zmk,behavior-custom";
+        exec {
+            zmk,deactivate-layer = <3>; // 마우스 레이어 끄기
+        };
     };
 };
     };
@@ -163,7 +169,7 @@
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt 2 ENTER  &lt1_safely SPACE
+                                     &lt1_safely 2 ENTER  &lt1_safely 1 SPACE
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -182,7 +188,7 @@
             bindings = <
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR   &bt BT_CLR_ALL  &trans   &trans   &kp N1
 &bootloader   &trans        &trans        &trans        &trans                &bootloader  &trans          &trans  &trans  &trans
-&trans        &trans        &trans        &trans        &trans                &trans       &trans          &trans  &trans  &trans
+&trans        &trans        &trans        &trans        &trans                &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT
                                           &trans        &trans
             >;
         };
