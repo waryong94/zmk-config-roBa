@@ -23,12 +23,11 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll: scroll_mods {
-            compatible = "zmk,behavior-momentary-layer";
-            label = "scroll_mods";
-            #binding-cells = <0>;
-            bindings = <4>;
-        };
+        scroll_mods: scroll_mods {
+      compatible = "zmk,behavior-momentary-layer";
+      label = "SCROLL_MODS";
+      #binding-cells = <1>;
+    };
     };
 };
 
@@ -159,7 +158,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &scroll &mkp RCLK
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK &scroll_mods 4 &mkp RCLK
                         &trans  &trans
             >;
         };
