@@ -23,9 +23,9 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll {
+        scroll: scroll_mods {
             compatible = "zmk,behavior-momentary-layer";
-            label = "scroll";
+            label = "scroll_mods";
             #binding-cells = <0>;
             bindings = <4>;
         };
