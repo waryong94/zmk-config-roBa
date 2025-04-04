@@ -119,27 +119,27 @@
             key-positions = <28 17>;
         };
 
-        SQ {
+        combo_SQ {
             bindings = <&kp LS(Q)>;
             key-positions = <0 31>;
         };
 
-        SW {
+        combo_SW {
             bindings = <&kp LS(W)>;
             key-positions = <31 1>;
         };
 
-        SE {
+        combo_SE {
             bindings = <&kp LS(E)>;
             key-positions = <2 31>;
         };
 
-        SR {
+        combo_SR {
             bindings = <&kp LS(R)>;
             key-positions = <3 31>;
         };
 
-        ST {
+        combo_ST {
             bindings = <&kp LS(T)>;
             key-positions = <4 31>;
         };
