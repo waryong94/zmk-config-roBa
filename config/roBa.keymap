@@ -14,7 +14,7 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll: layer_taps {
+        scroll: scroll_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <10>;
@@ -22,7 +22,7 @@
             bindings = <&mo 4>, <&kp>;
         };  
 
-        sniping: layer_taps {
+        sniping: sniping_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping_term_ms = <100>;
