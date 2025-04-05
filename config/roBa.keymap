@@ -158,6 +158,16 @@
             bindings = <&kp LS(T)>;
             key-positions = <4 31>;
         };
+
+        combo_SO {
+            bindings = <&kp LS(O)>;
+            key-positions = <8 31>;
+        };
+
+        combo_SP {
+            bindings = <&kp LS(P)>;
+            key-positions = <9 31>;
+        };
     };
 
     keymap {
