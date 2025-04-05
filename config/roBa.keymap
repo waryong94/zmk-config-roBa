@@ -60,7 +60,7 @@
             bindings =
                 <&macro_tap_time 10>,
                 <&macro_tap>,
-                <&kp LBKT &kp LEFT &kp RBKT>;
+                <&kp RBKT &kp LEFT &kp LBKT>;
         };
     };
 };
