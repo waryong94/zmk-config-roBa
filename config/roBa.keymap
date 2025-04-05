@@ -46,14 +46,14 @@
 
 / {
     macros {
-        hello: hello {
+        par: par {
             label = "hello";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 10>,
                 <&macro_tap>,
-                <&kp H &kp E &kp L &kp L &kp O>;
+                <&kp LPAR &kp LEFT &kp RPAR>;
         };
     };
 };
@@ -105,6 +105,11 @@
         combo_rbkt {
             bindings = <&kp RBKT>;
             key-positions = <5 6>;
+        };
+
+        combo_par {
+            bindings = <&par>;
+            key-positions = <7 8>;
         };
 
         combo_sqt {
@@ -160,7 +165,7 @@
             bindings = <
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
-&kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
+&kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &ht FSLH QUES
                                      &lt 5 ENTER  &lt 2 SPACE
             >;
         };
