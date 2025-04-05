@@ -161,12 +161,12 @@
 
         combo_SO {
             bindings = <&kp LS(O)>;
-            key-positions = <8 31>;
+            key-positions = <8 25>;
         };
 
         combo_SP {
             bindings = <&kp LS(P)>;
-            key-positions = <9 31>;
+            key-positions = <9 25>;
         };
     };
 
