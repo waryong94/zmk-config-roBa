@@ -47,13 +47,20 @@
 / {
     macros {
         par: par {
-            label = "hello";
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_tap_time 10>,
                 <&macro_tap>,
                 <&kp RPAR &kp LEFT &kp LPAR>;
+        };
+        bkt: bkt {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_tap_time 10>,
+                <&macro_tap>,
+                <&kp LBKT &kp LEFT &kp RBKT>;
         };
     };
 };
@@ -97,14 +104,9 @@
             key-positions = <17 18>;
         };
 
-        combo_lbkt {
-            bindings = <&kp LBKT>;
-            key-positions = <3 4>;
-        };
-
-        combo_rbkt {
-            bindings = <&kp RBKT>;
-            key-positions = <5 6>;
+        combo_bkt {
+            bindings = <&bkt>;
+            key-positions = <6 7>;
         };
 
         combo_par {
