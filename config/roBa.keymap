@@ -53,7 +53,7 @@
             bindings =
                 <&macro_tap_time 10>,
                 <&macro_tap>,
-                <&kp LPAR &kp LEFT &kp RPAR>;
+                <&kp RPAR &kp LEFT &kp LPAR>;
         };
     };
 };
