@@ -51,6 +51,6 @@ nice_view_spi: &spi1 {
 	input_relay_config_102 {
 		compatible = "zmk,split-peripheral-input-relay";
 		relay-channel = <102>;
-		device = <&pd1>;
+		device = <&pd0>;
 	};
 };
