@@ -51,7 +51,7 @@
     pinctrl-names = "default", "sleep";
     cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
 
-    trackball: trackball@0 {
+    pd0: trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
@@ -61,22 +61,4 @@
         scroll-layers = <4>;
         snipe-layers = <5>;
     };
-};
-
-&gpio0 {
-	status = "okay";
-};
-
-/ {
-	pd1: virtual_input {
-		compatible = "zmk,virtual-input";
-	};
-	
-	input_relay_config_102 {
-		compatible = "zmk,split-peripheral-input-relay";
-
-		device = <&pd0>;
-		
-		relay-channel = <102>;
-	};
 };
