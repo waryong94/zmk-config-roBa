@@ -63,7 +63,7 @@
     };
 };
 
-&pd0 {
+&gpio0 {
 	status = "okay";
 };
 
