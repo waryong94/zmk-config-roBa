@@ -39,7 +39,7 @@ nice_view_spi: &spi1 {
 };
 
 
-&gpio0 {
+&pd0 {
 	status = "okay";
 };
 
