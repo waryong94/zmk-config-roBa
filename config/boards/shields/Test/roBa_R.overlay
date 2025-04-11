@@ -62,3 +62,21 @@
         snipe-layers = <5>;
     };
 };
+
+&pd0 {
+	status = "okay";
+};
+
+/ {
+	pd1: virtual_input {
+		compatible = "zmk,virtual-input";
+	};
+	
+	input_relay_config_102 {
+		compatible = "zmk,split-peripheral-input-relay";
+
+		device = <&pd0>;
+		
+		relay-channel = <102>;
+	};
+};
