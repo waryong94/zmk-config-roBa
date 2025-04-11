@@ -241,9 +241,4 @@
                 compatible = "zmk,input-listener";
                 device = <&pd0>;
 	};
-
-        trackball_peripheral_listener {
-                compatible = "zmk,input-listener";
-                device = <&pd1>;
-	};
 }/
