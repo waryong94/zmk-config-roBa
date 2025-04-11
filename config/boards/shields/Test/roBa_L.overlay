@@ -37,3 +37,20 @@ nice_view_spi: &spi1 {
 	pinctrl-names = "default", "sleep";
 	cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
 };
+
+
+&pd0 {
+	status = "okay";
+};
+
+/ {
+	pd1: virtual_input {
+		compatible = "zmk,virtual-input";
+	};
+
+	input_relay_config_102 {
+		compatible = "zmk,split-peripheral-input-relay";
+		relay-channel = <102>;
+		device = <&pd1>;
+	};
+};
