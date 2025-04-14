@@ -95,20 +95,20 @@
     };
   };
 
-/{
+/ {
     split_inputs {
         #address-cells = <1>;
         #size-cells = <0>;
 
-        pd1: pd@1 {
+        glidepoint_split: glidepoint_split@0 {
             compatible = "zmk,input-split";
             reg = <0>;
         };
     };
 
-    trackball_listener: trackball_listener {
+    glidepoint_listener: glidepoint_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&pd1>;
+        device = <&glidepoint_split>;
     };
 };
