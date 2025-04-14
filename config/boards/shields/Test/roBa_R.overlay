@@ -67,7 +67,4 @@
 
 &glidepoint_split {
     device = <&glidepoint>;
-
-    // Optional
-  input-processors = <&zip_xy_transform 7>;
 };
