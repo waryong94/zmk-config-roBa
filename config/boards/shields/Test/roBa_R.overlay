@@ -69,5 +69,5 @@
     device = <&glidepoint>;
 
     // Optional
-  input-processors = <&zip_xy_transform 7>;;
+  input-processors = <&zip_xy_transform 7>;
 };
