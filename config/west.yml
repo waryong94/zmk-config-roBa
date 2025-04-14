@@ -1,17 +1,18 @@
 manifest:
   remotes:
-    - name: waryong94
-      url-base: https://github.com/waryong94
+    - name: zmkfirmware
+      url-base: https://github.com/zmkfirmware
+    - name: kumamuk-git
+      url-base: https://github.com/kumamuk-git
+    - name: badjeff
+      url-base: https://github.com/badjeff
   projects:
     - name: zmk
-      remote: waryong94
+      remote: zmkfirmware
       revision: main
       import: app/west.yml
     - name: zmk-pmw3610-driver
-      remote: waryong94
-      revision: main
-    - name: zmk-nice-oled
-      remote: waryong94
+      remote: badjeff
       revision: main
   self:
     path: config
