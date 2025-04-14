@@ -100,15 +100,15 @@
         #address-cells = <1>;
         #size-cells = <0>;
 
-        pd0: pd@0 {
+        pd1: pd@1 {
             compatible = "zmk,input-split";
             reg = <0>;
         };
     };
 
-    glidepoint_listener: glidepoint_listener {
+    trackball_listener: trackball_listener {
         compatible = "zmk,input-listener";
         status = "disabled";
-        device = <&pd0>;
+        device = <&pd1>;
     };
 };
