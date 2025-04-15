@@ -1,4 +1,6 @@
 #include "roBa.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+
 
 &default_transform {
     col-offset = <5>;
@@ -68,4 +70,12 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
   };
+
+        zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <1>;
+        require-prior-idle-ms = <2000>;
+        excluded-positions = <1 2 3>;
+    };
 };
+
