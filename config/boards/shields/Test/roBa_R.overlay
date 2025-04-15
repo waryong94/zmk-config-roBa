@@ -1,5 +1,6 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
+#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <5>;
@@ -15,6 +16,15 @@
             ;
 };
 
+
+/ {
+        zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <2000>;
+        excluded-positions = <1 2 3>;
+    };
+};
 
 &pinctrl {
     spi0_default: spi0_default {
