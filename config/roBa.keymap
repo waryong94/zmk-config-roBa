@@ -53,7 +53,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -62,7 +63,8 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            quick-tap-ms = <180>;
+            quick-tap-ms = <200>;
+            require-prior-idle-ms = <100>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
@@ -111,101 +113,122 @@
         compatible = "zmk,combos";
 
         combo_esc {
+            timeout-ms = <50>;
             bindings = <&kp ESC>;
             key-positions = <0 1>;
+            layers = <0>;
         };
 
         combo_grave {
+            timeout-ms = <50>;
             bindings = <&kp GRAVE>;
             key-positions = <1 2>;
         };
 
         combo_cut {
+            timeout-ms = <50>;
             bindings = <&kp LC(X)>;
             key-positions = <20 21>;
         };
 
         combo_copy {
+            timeout-ms = <50>;
             bindings = <&kp LC(C)>;
             key-positions = <21 22>;
         };
 
         combo_paste {
+            timeout-ms = <50>;
             bindings = <&kp LC(V)>;
             key-positions = <22 23>;
         };
 
         combo_lang {
+            timeout-ms = <50>;
             bindings = <&kp RALT>;
             key-positions = <27 28>;
         };
 
         combo_capslock {
+            timeout-ms = <50>;
             bindings = <&kp CAPS>;
             key-positions = <17 18>;
         };
 
         combo_bkt {
+            timeout-ms = <50>;
             bindings = <&bkt>;
             key-positions = <6 7>;
         };
 
         combo_par {
+            timeout-ms = <50>;
             bindings = <&par>;
             key-positions = <7 8>;
         };
 
         combo_sqt {
+            timeout-ms = <50>;
             bindings = <&kp SEMI>;
             key-positions = <18 19>;
         };
 
         combo_m {
+            timeout-ms = <50>;
             bindings = <&kp M>;
             key-positions = <26 27>;
         };
 
         combo_mouse4 {
+            timeout-ms = <50>;
             bindings = <&mkp MB4>;
             key-positions = <26 17>;
         };
 
         combo_mouse5 {
+            timeout-ms = <50>;
             bindings = <&mkp MB5>;
             key-positions = <28 17>;
         };
 
         combo_SQ {
+            timeout-ms = <50>;
             bindings = <&kp LS(Q)>;
             key-positions = <0 31>;
         };
 
         combo_SW {
+            timeout-ms = <50>;
             bindings = <&kp LS(W)>;
             key-positions = <31 1>;
         };
 
         combo_SE {
+            timeout-ms = <50>;
             bindings = <&kp LS(E)>;
             key-positions = <2 31>;
         };
 
         combo_SR {
+            timeout-ms = <50>;
             bindings = <&kp LS(R)>;
             key-positions = <3 31>;
         };
 
         combo_ST {
+            timeout-ms = <50>;
             bindings = <&kp LS(T)>;
             key-positions = <4 31>;
         };
 
         combo_SO {
+            timeout-ms = <50>;
             bindings = <&kp LS(O)>;
             key-positions = <8 33>;
         };
 
         combo_SP {
+            timeout-ms = <50>;
             bindings = <&kp LS(P)>;
             key-positions = <9 33>;
         };
@@ -219,7 +242,7 @@
             bindings = <
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
-&kp Z       &kp X       &kp C        &kp V        &kp B                &lt 1 N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
+&kp Z       &kp X       &kp C        &kp V        &kp B                &lt 4 N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
                                      &lt 1 ENTER  &lt 2 SPACE          &kp SPACE
             >;
         };
