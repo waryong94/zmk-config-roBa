@@ -3,8 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#include <interfaces/hid-trackball.dtsi>
-
 #define SCROLL &scroll_mods 4 DOT
 #define SNIPING &sniping_mods 5 RCLK
 
@@ -236,10 +234,4 @@
             >;
         };
     };
-&hid_trackball_interface {
-    automouse-layer = <1>;
-    automouse-layer-timeout-ms = <600>;
-    scroll-layers = <2>;
-    snipe-layers = <3>;
-};
 };
