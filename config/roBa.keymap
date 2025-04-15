@@ -236,9 +236,7 @@
             >;
         };
     };
-};
-
-/ {
+ {
   input-listeners {
     compatible = "zmk,input-listener-list";
     mouse_layer_trigger {
@@ -248,3 +246,7 @@
     };
   };
 };
+
+};
+
+
