@@ -17,7 +17,11 @@
             ;
     };
 
- 
+    trackball2_listener {
+     input-processors = 
+            <&zip_xy_to_scroll_mapper>;
+  layers = <2>;  // SCROLL_MOD 레이어에서
+    };
 
     behaviors {
         hm: homerow_mods {
