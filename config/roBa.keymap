@@ -3,8 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#include <input/processors.dtsi>
-
 #define SCROLL &scroll_mods 4 DOT
 #define SNIPING &sniping_mods 5 RCLK
 
@@ -236,17 +234,16 @@
             >;
         };
     };
- {
-  input-listeners {
-    compatible = "zmk,input-listener-list";
-    mouse_layer_trigger {
-      compatible = "zmk,input-listener-mouse-movement";
-      layer = <3>; // 트랙볼 움직이면 활성화할 레이어 ID
-      timeout-ms = <3000>; // 멈춘 뒤 몇 ms 후 레이어 끌지 설정
+    input-processor {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+
+        // 트랙볼이 움직였을 때 레이어 3을 임시로 활성화
+        require-prior-idle-ms = <2000>;  // 트랙볼이 멈춘 뒤 2초 후 자동 복귀
+        excluded-positions = <1 2 3>;    // 제외할 키 포지션 (여기서는 의미없음)
+        
+        // 트랙볼 움직임을 감지하여 레이어 전환
+        trigger-conditions = <ZMK_INPUT_CONDITION_MOTION>;
+        layer = <3>;  // 트랙볼이 움직일 때 활성화될 임시 레이어
     };
-  };
 };
-
-};
-
-
