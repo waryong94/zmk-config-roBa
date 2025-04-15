@@ -234,3 +234,15 @@
         };
     };
 };
+
+/ {
+  input-processors {
+    compatible = "zmk,input-processors";
+
+    trackball_temp_layer: trackball_temp_layer {
+      compatible = "zmk,input-processor-temp-layer";
+      device = <&trackball>;  // ← 트랙볼 디바이스 노드
+      layers = <1>;         // ← 마우스 레이어 번호
+    };
+  };
+};
