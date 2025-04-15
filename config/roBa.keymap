@@ -12,8 +12,8 @@
 / {
     trackball_listener {
         input-processors = 
-            <&zip_temp_layer 1 2000>
-            ;
+            <&zip_temp_layer 1 2000>;
+        excluded-positions = <1 2 3>;
     };
 
    tb_scroll_mapper_listener {
