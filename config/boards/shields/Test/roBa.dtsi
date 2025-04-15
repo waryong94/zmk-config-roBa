@@ -106,7 +106,7 @@
 
         temp_layer_trackball: temp_layer_trackball {
             compatible = "zmk,input-processor-temp-layer";
-            input-binding = <&trackball_sensor>;
+            input-binding = <&trackball>;
             layer = <1>;
             #input-processor-cells = <0>;
         };
