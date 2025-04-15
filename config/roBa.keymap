@@ -13,16 +13,15 @@
 / {
     trackball_listener {
      input-processors = 
-              <&zip_temp_layer 1 3000>
-            ;
+              <&zip_temp_layer 1 3000>;
     };
 
-    trackball2_listener {
-     input-processors = 
-            <&zip_xy_to_scroll_mapper>;
-  layers = <2>;  // SCROLL_MOD 레이어에서
+   trackball2_listener {
+        scroll_override {
+            layers = <2>; // SCROLL_MOD 레이어에서만 작동
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
-
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
