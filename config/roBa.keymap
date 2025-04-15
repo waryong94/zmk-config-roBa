@@ -235,15 +235,3 @@
         };
     };
 };
-
-/ {
-  input-processors {
-    compatible = "zmk,input-processors";
-
-    temp_layer_trackball {
-      compatible = "zmk,input-processor-temp-layer";
-      device = <&trackball>;       // ← 트랙볼 노드 이름 정확히 맞게!
-      layers = <1>;               // ← 마우스 레이어 번호
-    };
-  };
-};
