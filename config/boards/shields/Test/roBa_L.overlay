@@ -38,7 +38,3 @@ nice_view_spi: &spi1 {
 	cs-gpios = <&gpio0 9 GPIO_ACTIVE_HIGH>;
 };
 
-
-&trackball_listener {
-    status = "okay";
-};
