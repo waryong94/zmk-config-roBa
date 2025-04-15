@@ -16,39 +16,12 @@
             ;
     };
 
-    tb0_msl_ibl {
+   tb_scroll_mapper_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
         layers = <0>;
         evt-type = <INPUT_EV_REL>;
-                
-        /* slienting x-axis with alt event code */
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-
-        bindings = <&ib_wheel_scaler 1 8>;
-    };
-
-
-    tb1_msl_ibl {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball_listener>;
-        layers = <0>;
-        evt-type = <INPUT_EV_REL>;
-                
-        /* slienting x-axis with alt event code */
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-
-        bindings = <&ib_wheel_scaler 1 8>;
-    };
-
-    /* define a resolution down scaler only for INPUT_REL_WHEEL */
-    ib_wheel_scaler: ib_wheel_scaler {
-            compatible = "zmk,input-behavior-scaler";
-            #binding-cells = <2>;
-            evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_WHEEL>;
+        bindings = <&zip_xy_to_scroll_mapper>;
     };
 
     behaviors {
