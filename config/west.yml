@@ -13,8 +13,5 @@ manifest:
     - name: zmk-nice-oled
       remote: waryong94
       revision: main
-   - name: zmk-input-behavior-listener
-      remote: waryong94
-      revision: main
   self:
     path: config
