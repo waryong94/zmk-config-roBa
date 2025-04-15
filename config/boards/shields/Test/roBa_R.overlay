@@ -1,6 +1,4 @@
 #include "roBa.dtsi"
-#include <input/processors.dtsi>
-#include <zephyr/dt-bindings/input/input-event-codes.h>
 
 &default_transform {
     col-offset = <5>;
@@ -14,16 +12,6 @@
             , <&xiao_d 7 GPIO_ACTIVE_HIGH> 
             , <&gpio0 10 GPIO_ACTIVE_HIGH>
             ;
-};
-
-
-/ {
-        zip_temp_layer: zip_temp_layer {
-        compatible = "zmk,input-processor-temp-layer";
-        #input-processor-cells = <2>;
-        require-prior-idle-ms = <2000>;
-        excluded-positions = <1 2 3>;
-    };
 };
 
 &pinctrl {
@@ -65,7 +53,6 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        zip_temp_layer = <2 2000>;
 
         force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
