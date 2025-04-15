@@ -80,30 +80,3 @@
                 ;
     };
 };
-
-
-/ {
-    split_inputs {
-        #address-cells = <1>;
-        #size-cells = <0>;
-
-        trackball: trackball@0 {
-            compatible = "zmk,input-split";
-            reg = <0>;
-        };
-    };
-
-    trackball_listener: trackball_listener {
-        compatible = "zmk,input-listener";
-        status = "disabled";
-        device = <&trackball>;
-    };
-
- trackball_mouse_layer_listener: trackball_listener {
-        compatible = "zmk,input-processor-temp-layer";
-        label = "trackball_listener";
-        input = <&trackball_right>;
-        layer = <1>; // 마우스 레이어
-    };
-
-};
