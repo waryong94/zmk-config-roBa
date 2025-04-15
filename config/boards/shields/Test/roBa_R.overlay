@@ -72,6 +72,11 @@
     device = <&trackball>;
   };
 
+  trackball3_listener {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+  };
+
   tb_scroll_mapper_listener {
         compatible = "zmk,input-behavior-listener";
         device = <&trackball>;
