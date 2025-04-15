@@ -17,14 +17,13 @@
     };
 
 
-  tb_scroll_mapper_listener {
-        layers = <2>;        // SCROLL_MOD 레이어
-        evt-type = <INPUT_EV_REL>;
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-
-        input-processors = <&zip_xy_to_scroll_mapper>;
+   trackball2_listener {
+        scroll_override {
+            layers = <2>;
+            input-processors = <&zip_xy_to_scroll_mapper>;
+        };
     };
+
 
     behaviors {
         hm: homerow_mods {
