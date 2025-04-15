@@ -1,4 +1,5 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>
 
 &default_transform {
     col-offset = <5>;
@@ -54,6 +55,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
+        zip_temp_layer = <2>;
 
         force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
