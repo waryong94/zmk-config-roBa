@@ -68,9 +68,4 @@
     compatible = "zmk,input-listener";
     device = <&trackball>;
   };
-trackball_mouse_layer_listener {
-    compatible = "zmk,input-processor-temp-layer";
-    label = "trackball_mouse_layer_listener";
-    input = <&trackball>;
-    layer = <1>; // 자동으로 켜질 레이어 번호
 };
