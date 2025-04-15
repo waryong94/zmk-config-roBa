@@ -237,3 +237,14 @@
         };
     };
 };
+
+/ {
+  input-listeners {
+    compatible = "zmk,input-listener-list";
+    mouse_layer_trigger {
+      compatible = "zmk,input-listener-mouse-movement";
+      layer = <3>; // 트랙볼 움직이면 활성화할 레이어 ID
+      timeout-ms = <3000>; // 멈춘 뒤 몇 ms 후 레이어 끌지 설정
+    };
+  };
+};
