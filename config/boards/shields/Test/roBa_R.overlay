@@ -55,7 +55,7 @@
         evt-type = <INPUT_EV_REL>;
         x-input-code = <INPUT_REL_X>;
         y-input-code = <INPUT_REL_Y>;
-        zip_temp_layer = <2>;
+        zip_temp_layer = <2 2000>;
 
         force-awake;
         /* keep the sensor awake while ZMK activity state is ACTIVE,
