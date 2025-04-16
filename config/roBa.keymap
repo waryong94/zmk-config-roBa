@@ -9,7 +9,7 @@
 
 / {
     trackball_listener {
-     input-processors =  <&zip_temp_layer 1 2000 26 27 28 29>;
+     input-processors =  <&zip_temp_layer 1 1000>;
       scroller {
         layers = <4>;
         input-processors = <
@@ -211,7 +211,7 @@
             label = "default";
             bindings = <
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
-&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
+&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI P
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
                                      &lt 3 ENTER  &lt 2 SPACE          &kp SPACE
             >;
@@ -221,7 +221,7 @@
             label = "MOUSE";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &SQT
 &trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK SCROLL        &mkp RCLK  
                         &trans  &trans          &trans
             >;
