@@ -7,8 +7,6 @@
 #include <input/processors.dtsi>
 
 #define SCROLL &scroll_mods 4 DOT
-#define SNIPING &sniping_mods 5 RCLK
-
 
 / {
     trackball_listener {
@@ -68,7 +66,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
-            bindings = <&mo>, <&mkp>;
+            bindings = <&mo>, <&kp>;
         };
     };
 };
@@ -109,114 +107,140 @@
             timeout-ms = <50>;
             bindings = <&kp GRAVE>;
             key-positions = <1 2>;
+            layers = <0>;
         };
 
         combo_cut {
             timeout-ms = <50>;
             bindings = <&kp LC(X)>;
             key-positions = <20 21>;
+            layers = <0>;
         };
 
         combo_copy {
             timeout-ms = <50>;
             bindings = <&kp LC(C)>;
             key-positions = <21 22>;
+            layers = <0>;
         };
 
         combo_paste {
             timeout-ms = <50>;
             bindings = <&kp LC(V)>;
             key-positions = <22 23>;
+            layers = <0>;
         };
 
         combo_lang {
             timeout-ms = <50>;
             bindings = <&kp RALT>;
             key-positions = <27 28>;
+            layers = <0>;
         };
 
         combo_capslock {
             timeout-ms = <50>;
             bindings = <&kp CAPS>;
             key-positions = <17 18>;
+            layers = <0>;
         };
 
         combo_bkt {
             timeout-ms = <50>;
             bindings = <&bkt>;
             key-positions = <6 7>;
+            layers = <0>;
         };
 
         combo_par {
             timeout-ms = <50>;
             bindings = <&par>;
             key-positions = <7 8>;
+            layers = <0>;
         };
 
         combo_sqt {
             timeout-ms = <50>;
             bindings = <&kp SEMI>;
             key-positions = <18 19>;
+            layers = <0>;
         };
 
         combo_m {
             timeout-ms = <50>;
             bindings = <&kp M>;
             key-positions = <26 27>;
+            layers = <1>;
         };
 
         combo_mouse4 {
             timeout-ms = <50>;
             bindings = <&mkp MB4>;
             key-positions = <26 17>;
+            layers = <1>;
         };
 
         combo_mouse5 {
             timeout-ms = <50>;
             bindings = <&mkp MB5>;
             key-positions = <28 17>;
+            layers = <1>;
+        };
+
+        combo_sniping {
+            timeout-ms = <30>;
+            bindings = <&sniping_mods 5 none>;
+            key-positions = <27 28>;
+            layers = <1>;
         };
 
         combo_SQ {
             timeout-ms = <50>;
             bindings = <&kp LS(Q)>;
             key-positions = <0 31>;
+            layers = <0>;
         };
 
         combo_SW {
             timeout-ms = <50>;
             bindings = <&kp LS(W)>;
             key-positions = <31 1>;
+            layers = <0>;
         };
 
         combo_SE {
             timeout-ms = <50>;
             bindings = <&kp LS(E)>;
             key-positions = <2 31>;
+            layers = <0>;
         };
 
         combo_SR {
             timeout-ms = <50>;
             bindings = <&kp LS(R)>;
             key-positions = <3 31>;
+            layers = <0>;
         };
 
         combo_ST {
             timeout-ms = <50>;
             bindings = <&kp LS(T)>;
             key-positions = <4 31>;
+            layers = <0>;
         };
 
         combo_SO {
             timeout-ms = <50>;
             bindings = <&kp LS(O)>;
-            key-positions = <8 33>;
+            key-positions = <8 32>;
+            layers = <0>;
         };
 
         combo_SP {
             timeout-ms = <50>;
             bindings = <&kp LS(P)>;
-            key-positions = <9 33>;
+            key-positions = <9 32>;
+            layers = <0>;
         };
     };
 
@@ -238,7 +262,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans    &trans    &trans         &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK SCROLL SNIPING
+&trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK SCROLL        &mkp RCLK  
                         &trans  &trans          &trans
             >;
         };
