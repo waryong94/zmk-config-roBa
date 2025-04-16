@@ -25,7 +25,9 @@
         process-next;
        };
     };
-
+&zip_temp_layer {
+  excluded-positions = <26 27 28 29>;
+};
     behaviors {
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
