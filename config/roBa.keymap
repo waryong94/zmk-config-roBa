@@ -263,7 +263,7 @@
             >;
         };
 
-        SCROLL_MOD {
+        SCROLL_layer {
             label = "SCROLL";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
@@ -273,7 +273,7 @@
             >;
         };
 
-        SNIPING_MOD {
+        SNIPING_layer {
             label = "SNIPING";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
