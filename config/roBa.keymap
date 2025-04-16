@@ -198,18 +198,6 @@
             bindings = <&kp LS(T)>;
             key-positions = <4 31>;
         };
-
-        combo_SO {
-            timeout-ms = <50>;
-            bindings = <&kp LS(O)>;
-            key-positions = <8 32>;
-        };
-
-        combo_SP {
-            timeout-ms = <50>;
-            bindings = <&kp LS(P)>;
-            key-positions = <9 32>;
-        };
     };
 
     keymap {
