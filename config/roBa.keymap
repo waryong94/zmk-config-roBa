@@ -6,7 +6,7 @@
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <input/processors.dtsi>
 
-#define SCROLL &scroll_mods 4 DOT
+#define SCROLL &mouse_mods 4 none
 
 / {
     trackball_listener {
@@ -53,18 +53,10 @@
             bindings = <&kp>, <&kp>;
         };
 
-        scroll_mods: scroll_mods {
+        mouse_mods: scroll_mods {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             tapping-term-ms = <10>;
-            flavor = "hold-preferred";
-            bindings = <&mo>, <&kp>;
-        };
-
-        sniping_mods: sniping_mods {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
             flavor = "hold-preferred";
             bindings = <&mo>, <&kp>;
         };
