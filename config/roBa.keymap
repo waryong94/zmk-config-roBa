@@ -165,13 +165,6 @@
             layers = <1>;
         };
 
-        combo_sniping {
-            timeout-ms = <30>;
-            bindings = <&mo 5>;
-            key-positions = <27 28>;
-            layers = <1>;
-        };
-
         combo_SQ {
             timeout-ms = <50>;
             bindings = <&kp LS(Q)>;
@@ -231,7 +224,7 @@
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I     &ht F9 O    &ht F10 P
 &hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K  &hm LALT L  &hm LGUI SQT
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA    &kp DOT     &kp FSLH
-                                     &lt 1 ENTER  &lt 2 SPACE          &kp SPACE
+                                     &lt 3 ENTER  &lt 2 SPACE          &kp SPACE
             >;
         };
 
@@ -256,27 +249,17 @@
         };
 
         FUNCTION {
-            label = "FUNCTION";
+            label = "SNIPING";
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR   &bt BT_CLR_ALL  &trans   &trans   &kp N1
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4          &bt BT_CLR   &bt BT_CLR_ALL  &trans   &trans   &trans 
 &trans        &trans        &trans        &trans        &trans                &trans        &trans        &trans        &trans        &trans
-&trans        &trans        &trans        &trans        &trans                &trans        &trans        &trans        &trans        &trans
-                                          &trans        &trans         &trans
+&trans        &trans        &trans        &trans        &trans                &trans        &mkp LCLK  &mkp MCLK SCROLL        &mkp RCLK  
+                                          &trans        &trans                 &trans
             >;
         };
 
         SCROLL_layer {
             label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans         &trans
-            >;
-        };
-
-        SNIPING_layer {
-            label = "SNIPING";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
