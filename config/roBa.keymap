@@ -11,40 +11,23 @@
 
 
 / {
-        tb0_msl_ibl {
-        compatible = "zmk,input-behavior-listener";
-        device = <&trackball>;
-        layers = <4>;
-        evt-type = <INPUT_EV_REL>;
-                
-        /* slienting x-axis with alt event code */
-        x-input-code = <INPUT_REL_HWHEEL>;
-        y-input-code = <INPUT_REL_WHEEL>;
-
-        /* invent scrolling direction */
-        xy-swap;
-        /* NOTE 1: This settings do not compitable with y-invert and x-invert */
-        /* NOTE 2: Floating point computation requires alot of ram. */
-        /*         This feature will cuase stackove flow with CONFIG_ZMK_USB_LOGGING=y */
-
-        /* bind a behavior to down scaling input value to (1/8) */
-        /* NOTE: This behavior memorizes recent pending displacement, it is different to scale-divisor. */
-        /*       The delta value is accumlated until result >= 1 after cast. */
-        /*       The scrolling will be smoother and allow precise scrolling */
-        bindings = <&ib_wheel_scaler 1 8>;
-    };
-
-    /* define a resolution down scaler only for INPUT_REL_WHEEL */
-    ib_wheel_scaler: ib_wheel_scaler {
-            compatible = "zmk,input-behavior-scaler";
-            #binding-cells = <2>;
-            evt-type = <INPUT_EV_REL>;
-            input-code = <INPUT_REL_WHEEL>;
-    };
-
     trackball_listener {
-     input-processors = 
-              <&zip_temp_layer 1 3000>;
+     input-processors =  <&zip_temp_layer 1 3000>;
+      scroller {
+        layers = <4>;
+        input-processors = <&zip_xy_to_scroll_mapper>;
+        process-next;
+    };
+
+        sniping {
+        layers = <5>;
+        input-processors = <&zip_xy_scaler 1 8>;
+        process-next;
+       };
+
+
+   
+
     };
 
  
