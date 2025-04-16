@@ -9,7 +9,7 @@
 
 / {
     trackball_listener {
-     input-processors =  <&zip_temp_layer 1 1000>;
+     input-processors =  <&zip_temp_layer>;
       scroller {
         layers = <4>;
         input-processors = <
@@ -25,6 +25,14 @@
         process-next;
        };
     };
+
+    zip_temp_layer: zip_temp_layer {
+        compatible = "zmk,input-processor-temp-layer";
+        layer = <1>;
+        require-prior-idle-ms = <1000>;
+        excluded-positions = <26 27 28 29>;
+    };
+
 
     behaviors {
         hm: homerow_mods {
