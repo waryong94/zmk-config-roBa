@@ -141,7 +141,7 @@
 
         combo_bslh {
             timeout-ms = <50>;
-            bindings = <&BSLH>;
+            bindings = <&kp BSLH>;
             key-positions = <8 9>;
         };
 
