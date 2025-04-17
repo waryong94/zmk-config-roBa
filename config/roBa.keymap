@@ -41,21 +41,12 @@
     arrows {
         layers = <2>;
         bindings =
-            <&kp RIGHT_ARROW>,
-            <&kp LEFT_ARROW>,
-            <&kp UP_ARROW>,
+            <&kp RIGHT_ARROW>
+            <&kp LEFT_ARROW>
+            <&kp UP_ARROW>
             <&kp DOWN_ARROW>;
 
         tick = <10>;
-    };
-
-    volume {
-        layers = <3>;
-        bindings =
-            <&none>,
-            <&none>,
-            <&kp C_VOLUME_UP>,
-            <&kp C_VOLUME_DOWN>;
     };
 };
 
