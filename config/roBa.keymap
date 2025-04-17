@@ -30,11 +30,34 @@
         };
 
         sniping {
-            layers = <3>;
+            layers = <5>;
             input-processors = <&zip_xy_scaler 1 3>;
             process-next;
         };
     };
+
+&trackbal_right {
+
+    arrows {
+        layers = <2>;
+        bindings =
+            <&kp RIGHT_ARROW>,
+            <&kp LEFT_ARROW>,
+            <&kp UP_ARROW>,
+            <&kp DOWN_ARROW>;
+
+        tick = <10>;
+    };
+
+    volume {
+        layers = <3>;
+        bindings =
+            <&none>,
+            <&none>,
+            <&kp C_VOLUME_UP>,
+            <&kp C_VOLUME_DOWN>;
+    };
+};
 
     behaviors {
         hm: homerow_mods {
@@ -222,6 +245,16 @@
 
         SCROLL_layer {
             label = "SCROLL";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans          &trans
+            >;
+        };
+
+SNIPING_layer {
+            label = "SNIPING";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
