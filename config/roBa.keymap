@@ -175,36 +175,6 @@
             bindings = <&mkp MB5>;
             key-positions = <28 17>;
         };
-
-        combo_SQ {
-            timeout-ms = <50>;
-            bindings = <&kp LS(Q)>;
-            key-positions = <0 31>;
-        };
-
-        combo_SW {
-            timeout-ms = <50>;
-            bindings = <&kp LS(W)>;
-            key-positions = <31 1>;
-        };
-
-        combo_SE {
-            timeout-ms = <50>;
-            bindings = <&kp LS(E)>;
-            key-positions = <2 31>;
-        };
-
-        combo_SR {
-            timeout-ms = <50>;
-            bindings = <&kp LS(R)>;
-            key-positions = <3 31>;
-        };
-
-        combo_ST {
-            timeout-ms = <50>;
-            bindings = <&kp LS(T)>;
-            key-positions = <4 31>;
-        };
     };
 
     keymap {
