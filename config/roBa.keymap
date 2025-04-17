@@ -30,7 +30,7 @@
         };
 
         sniping {
-            layers = <5>;
+            layers = <3>;
             input-processors = <&zip_xy_scaler 1 3>;
             process-next;
         };
