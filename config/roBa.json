@@ -1,4 +1,6 @@
 {
+  "id": "roBa",
+  "name": "roBa",
   "layouts": {
     "default_layout": {
       "name": "default_layout",
@@ -41,5 +43,6 @@
         { "row": 3, "col":  9, "x":  8.158, "y": 3.616, "r": -10, "rx": 8.658, "ry": 4.116 }
       ]
     }
-  }
+  },
+  "sensors": []
 }
