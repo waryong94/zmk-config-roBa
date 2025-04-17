@@ -175,6 +175,12 @@
             bindings = <&mkp MB5>;
             key-positions = <28 17>;
         };
+
+            combo_reset {
+            timeout-ms = <50>;
+            bindings = <&sys_reset>;
+            key-positions = <6 7 8>;
+        };
     };
 
     keymap {
@@ -184,7 +190,7 @@
             label = "default";
             bindings = <
 &ht F1 Q    &ht F2 W    &ht F3 E     &ht F4 R     &ht F5 T             &ht F6 Y   &ht F7 U     &ht F8 I   &ht F9 O  &ht F10 P
-&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K      &hm LALT L     &hm LGUI P
+&hm LGUI A  &hm LALT S  &hm LCTRL D  &hm LSHFT F  &ht F11 G            &ht F12 H  &hm LSHFT J  &hm LCTRL K      &hm LALT L     &hm LGUI SQT
 &kp Z       &kp X       &kp C        &kp V        &kp B                &kp N      &kp M        &kp COMMA  &kp DOT   &kp FSLH
                                      &lt 3 ENTER  &lt 2 SPACE          &kp SPACE
             >;
@@ -194,7 +200,7 @@
             label = "MOUSE";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans            &trans     &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans            &trans     &kp SQT
+&trans  &trans  &trans  &trans  &trans          &trans  &trans     &trans            &trans     &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &mkp LCLK  &mkp MCLK SCROLL  &mkp RCLK  &trans
                         &trans  &trans
             >;
@@ -222,16 +228,6 @@
 
         SCROLL_layer {
             label = "SCROLL";
-            bindings = <
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans          &trans
-            >;
-        };
-
-SNIPING_layer {
-            label = "SNIPING";
             bindings = <
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans  &trans  &trans
